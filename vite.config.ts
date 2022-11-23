@@ -9,6 +9,9 @@ import * as fs from 'fs';
 export default defineConfig(({ mode }) => ({
   root: 'src',
   publicDir: 'assets',
+  ssr: {
+    noExternal: ['@analogjs/router']
+  },
   build: {
     outDir: `../dist/my-app/client`,
     emptyOutDir: true,
